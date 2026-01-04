@@ -1,0 +1,11 @@
+{
+  "name": "@starter/ts",
+  "private": true,
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=10",
+      "onFail": "error"
+    }
+  }
+}

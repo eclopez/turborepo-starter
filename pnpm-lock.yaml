@@ -18,6 +18,8 @@ importers:
         specifier: ^2.7.2
         version: 2.7.2
 
+  config/ts: {}
+
 packages:
 
   '@babel/code-frame@7.27.1':
