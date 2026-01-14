@@ -1,0 +1,23 @@
+{
+  "name": "@starter/tools",
+  "private": true,
+  "type": "commonjs",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=10",
+      "onFail": "error"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@starter/eslint": "workspace:*",
+    "@starter/ts": "workspace:*",
+    "@turbo/gen": "^2.7.4",
+    "@types/node": "^25.0.8",
+    "typescript": "^5.9.3"
+  }
+}

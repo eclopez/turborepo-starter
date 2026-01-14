@@ -1,0 +1,13 @@
+{
+  "extends": "@starter/ts/library.json",
+  "compilerOptions": {
+    "baseUrl": "turbo",
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "verbatimModuleSyntax": false
+  },
+  "include": ["**/*.mts", "**/*.ts", "turbo/generators/config.ts", "turbo/generators/config.ts"],
+  "exclude": ["node_modules"]
+}
