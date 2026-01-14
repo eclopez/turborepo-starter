@@ -1,0 +1,53 @@
+{
+  "name": "@starter/ui",
+  "private": true,
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=10",
+      "onFail": "error"
+    }
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles/theme": "./dist/styles/theme.css",
+    "./styles/ui": "./dist/styles/ui.css"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@starter/eslint": "workspace:*",
+    "@starter/ts": "workspace:*",
+    "@starter/vitest": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "jsdom": "^27.4.0",
+    "tailwindcss": "catalog:",
+    "tsup": "^8.5.1",
+    "typescript": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:"
+  }
+}

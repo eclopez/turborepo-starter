@@ -6,6 +6,9 @@ node_modules/
 .vscode
 .history
 
+# Output
+dist/
+
 # System Files
 .DS_Store
 

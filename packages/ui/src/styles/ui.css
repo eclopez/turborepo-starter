@@ -1,0 +1,5 @@
+/* Only includes styles that are used in components exported from the UI package (excludes stories) */
+@import 'tailwindcss';
+@import './theme.css';
+
+@source '../components/**/!(*.stories).{ts,tsx}';
