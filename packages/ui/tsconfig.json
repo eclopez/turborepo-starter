@@ -1,0 +1,11 @@
+{
+  "extends": "@starter/ts/react.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*.mts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "vitest.config.ts"]
+}
