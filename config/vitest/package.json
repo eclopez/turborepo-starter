@@ -12,9 +12,9 @@
   "dependencies": {
     "@starter/ts": "workspace:*",
     "@vitejs/plugin-react": "^5.1.2",
-    "vitest": "^4.0.17"
+    "vitest": "catalog:"
   },
   "peerDependencies": {
-    "vitest": "^4.0.17"
+    "vitest": "catalog:"
   }
 }

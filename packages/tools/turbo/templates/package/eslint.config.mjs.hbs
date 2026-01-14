@@ -1,0 +1,18 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+{{#if react}}
+import react from '@starter/eslint/react.js'
+{{else}}
+import library from '@starter/eslint/library.js'
+{{/if}}
+
+export default [
+  {
+    ignores: ['node_modules/**', 'eslint.config.mjs'],
+  },
+  {{#if react}}
+  ...react,
+  {{else}}
+  ...library,
+  {{/if}}
+]

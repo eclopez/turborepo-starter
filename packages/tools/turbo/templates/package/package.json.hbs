@@ -1,0 +1,35 @@
+{
+  "name": "@starter/{{ name }}",
+  "private": true,
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=10",
+      "onFail": "error"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    {{#if react}}
+    "react": "catalog:",
+    "react-dom": "catalog:"
+    {{/if}}
+  },
+  "devDependencies": {
+    "@starter/eslint": "workspace:*",
+    "@starter/ts": "workspace:*",
+    "@starter/vitest": "workspace:*",
+    "@types/node": "catalog:",
+    {{#if react}}
+    "@types/react": "catalog:",
+    {{/if}}
+    "typescript": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:"
+  }
+}

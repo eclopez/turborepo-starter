@@ -1,0 +1,21 @@
+{{#if react}}
+import reactConfig from '@starter/vitest/react'
+{{else}}
+import libraryConfig from '@starter/vitest/library'
+{{/if}}
+import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig, mergeConfig } from 'vitest/config'
+
+export default mergeConfig(
+  {{#if react}}
+  reactConfig,
+  {{else}}
+  libraryConfig,
+  {{/if}}
+  defineConfig({
+    plugins: [tsconfigPaths()],
+    test: {
+      exclude: ['node_modules'],
+    },
+  }),
+)
