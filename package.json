@@ -25,10 +25,12 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "gen": "npm_config_loglevel=error npm_config_force=true turbo gen",
     "lint": "turbo lint",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
+    "@manypkg/cli": "^0.25.1",
     "@trivago/prettier-plugin-sort-imports": "^6.0.1",
     "eslint": "^9.39.2",
     "prettier": "^3.7.4",

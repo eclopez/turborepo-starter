@@ -1,0 +1,19 @@
+{
+  {{#if react}}
+  "extends": "@starter/ts/react.json",
+  {{else}}
+  "extends": "@starter/ts/library.json",
+  {{/if}}
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  {{#if react}}
+  "include": ["**/*.mts", "**/*.ts", "**/*.tsx"],
+  {{else}}
+  "include": ["**/*.mts", "**/*.ts"],
+  {{/if}}
+  "exclude": ["node_modules", "vitest.config.ts"]
+}
