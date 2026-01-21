@@ -1,0 +1,14 @@
+import * as React from 'react'
+import classnames from 'classnames'
+
+const {{ pascalCase name }} = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const { className, ...other } = props;
+
+  return (
+    <div className={classnames('starter-{{dashCase name}}', className)} {...other}>
+      {{ pascalCase name }} component
+    </div>
+  );
+}
+
+export { {{ pascalCase name }} }
