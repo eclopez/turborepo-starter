@@ -1,0 +1,7 @@
+{
+  "extends": "@starter/ts/react.json",
+  "compilerOptions": {
+    "module": "es2022"
+  },
+  "include": [".storybook/**/*"]
+}
