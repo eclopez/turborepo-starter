@@ -61,6 +61,11 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
         templateFile: '../templates/component/index.ts.hbs',
       },
       {
+        type: 'add',
+        path: '{{ turbo.paths.root }}/packages/ui/src/components/{{ scope }}/{{ pascalCase name }}/{{ pascalCase name }}.stories.tsx',
+        templateFile: '../templates/component/component.stories.tsx.hbs',
+      },
+      {
         type: 'modify',
         path: '{{ turbo.paths.root }}/packages/ui/src/components/{{ scope }}/index.ts',
         transform: (content: string, answers) => {
