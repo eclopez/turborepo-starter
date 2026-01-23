@@ -23,6 +23,8 @@
     ]
   },
   "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "gen": "npm_config_loglevel=error npm_config_force=true turbo gen",
