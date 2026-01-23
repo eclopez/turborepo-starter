@@ -21,7 +21,6 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "eslint": "catalog:",
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-storybook": "^10.2.0",
     "globals": "catalog:",
