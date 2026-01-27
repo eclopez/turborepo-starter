@@ -11,7 +11,7 @@ catalog:
   '@types/node': ^25.0.8
   '@types/react': ^19.2.8
   '@vitejs/plugin-react': ^5.1.2
-  'classnames': ^2.5.1
+  'clsx': ^2.1.1
   'globals': ^17.0.0
   'react': ^19.2.3
   'react-dom': ^19.2.3

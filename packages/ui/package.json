@@ -29,7 +29,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "classnames": "catalog:",
+    "clsx": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

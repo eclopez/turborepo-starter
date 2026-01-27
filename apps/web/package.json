@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "classnames": "catalog:",
+    "clsx": "catalog:",
     "next": "^16.1.4",
     "react": "catalog:",
     "react-dom": "catalog:"
