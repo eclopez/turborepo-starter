@@ -29,6 +29,7 @@
     "format:check": "prettier --check .",
     "gen": "npm_config_loglevel=error npm_config_force=true turbo gen",
     "lint": "turbo lint",
+    "prepare": "husky",
     "test": "turbo test",
     "test:watch": "turbo test:watch",
     "typecheck": "turbo typecheck"
