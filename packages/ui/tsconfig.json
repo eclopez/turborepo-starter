@@ -1,9 +1,8 @@
 {
   "extends": "@starter/ts/react.json",
   "compilerOptions": {
-    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["**/*.mts", "**/*.ts", "**/*.tsx"],

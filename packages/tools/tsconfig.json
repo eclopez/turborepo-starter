@@ -1,10 +1,9 @@
 {
   "extends": "@starter/ts/library.json",
   "compilerOptions": {
-    "baseUrl": "turbo",
     "noEmit": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./turbo/*"]
     },
     "verbatimModuleSyntax": false
   },
