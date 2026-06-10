@@ -1,3 +1,11 @@
+@layer theme, base, components, ui, utilities;
+
 @import 'tailwindcss';
+
+@source './src/**/*.{ts,tsx}';
+
+@layer base {
+}
+
 @import '@starter/ui/styles/theme';
 @import '@starter/ui/styles/ui';

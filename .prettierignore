@@ -1,3 +1,10 @@
 node_modules
 pnpm-lock.yaml
 *.hbs
+
+# Build output & caches
+**/storybook-static
+**/dist
+**/.next
+**/.turbo
+**/coverage
