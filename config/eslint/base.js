@@ -21,10 +21,13 @@ export default [
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          vars: 'all',
           args: 'after-used',
-          ignoreRestSiblings: true,
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
           destructuredArrayIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+          vars: 'all',
+          varsIgnorePattern: '^_',
         },
       ],
       'no-only-tests/no-only-tests': 'error',
