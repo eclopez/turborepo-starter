@@ -16,17 +16,17 @@
     "@starter/eslint": "workspace:^",
     "@starter/ts": "workspace:^",
     "@starter/ui": "workspace:^",
-    "@storybook/react-vite": "^10.2.0",
+    "@storybook/react-vite": "10.4.3",
     "@tailwindcss/postcss": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "eslint-plugin-storybook": "^10.2.0",
+    "eslint-plugin-react-refresh": "0.5.2",
+    "eslint-plugin-storybook": "10.4.3",
     "globals": "catalog:",
-    "storybook": "^10.2.0",
+    "storybook": "10.4.3",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
-    "vite": "^7.2.4"
+    "vite": "8.0.16"
   }
 }

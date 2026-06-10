@@ -16,7 +16,7 @@
   "devDependencies": {
     "@starter/eslint": "workspace:*",
     "@starter/ts": "workspace:*",
-    "@turbo/gen": "^2.7.4",
+    "@turbo/gen": "2.9.17",
     "@types/node": "catalog:",
     "typescript": "catalog:"
   }

@@ -1,9 +1,13 @@
 {
   "extends": "@starter/ts/react.json",
   "compilerOptions": {
+    // tsup injects an explicit `baseUrl`which causes ts errors when running tsup
+    // TODO: Remove when tsup is updated, or after replacing tsup
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["node"],
   },
   "include": ["**/*.mts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "vitest.config.ts"]
