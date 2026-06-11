@@ -1,14 +1,25 @@
 import * as React from 'react'
-import clsx from 'clsx'
+{{#if isUiComponent}}
+import { cn } from '@/utils'
+{{else}}
+import { cn } from '@starter/ui'
+{{/if}}
 
-const {{ pascalCase name }} = (props: React.HTMLAttributes<HTMLDivElement>) => {
-  const { className, ...other } = props;
+type {{ pascalCase name }}Props = React.ComponentPropsWithRef<'div'>
+
+const {{ pascalCase name }} = (props: {{ pascalCase name }}Props) => {
+  const { className, ...other } = props
 
   return (
-    <div className={clsx('starter-{{dashCase name}}', className)} {...other}>
+    {{#if isUiComponent}}
+    <div className={cn('ui-{{dashCase name}}', className)} {...other}>
+    {{else}}
+    <div className={cn('starter-{{dashCase name}}', className)} {...other}>
+    {{/if}}
       {{ pascalCase name }} component
     </div>
-  );
+  )
 }
 
 export { {{ pascalCase name }} }
+export type { {{ pascalCase name }}Props }

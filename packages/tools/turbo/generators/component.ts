@@ -66,11 +66,13 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
             type: 'add',
             path: '{{ turbo.paths.root }}/packages/ui/src/components/{{ scope }}/{{ pascalCase name }}/{{ pascalCase name }}.tsx',
             templateFile: '../templates/component/component.tsx.hbs',
+            data: { isUiComponent: true },
           },
           {
             type: 'add',
             path: '{{ turbo.paths.root }}/packages/ui/src/components/{{ scope }}/{{ pascalCase name }}/{{ pascalCase name }}.test.tsx',
             templateFile: '../templates/component/component.test.tsx.hbs',
+            data: { isUiComponent: true },
           },
           {
             type: 'add',
@@ -103,8 +105,6 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
         actions.push(async (answers) => {
           const { name, scope } = answers as ComponentAnswers
           const cwd = process.cwd()
-          console.log('Linting package.json...')
-          execSync('pnpm manypkg fix', { stdio: 'inherit', cwd })
           console.log('Fixing prettier issues...')
           execSync(`pnpm prettier --write "packages/ui/src/components/${scope}/${name}/**" --list-different`, { cwd })
           console.log('Linting remaining files...')
@@ -133,12 +133,10 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
         actions.push(async (answers) => {
           const { name } = answers as ComponentAnswers
           const cwd = process.cwd()
-          console.log('Linting package.json...')
-          execSync('pnpm manypkg fix', { stdio: 'inherit', cwd })
           console.log('Fixing prettier issues...')
           execSync(`pnpm prettier --write "apps/web/src/components/${name}/**" --list-different`, { cwd })
-          console.log('Linting remaining files...')
-          execSync('pnpm lint -- --fix', { stdio: 'inherit', cwd })
+          console.log('Linting new component files...')
+          execSync(`pnpm --filter=web exec eslint --fix "src/components/${name}/**"`, { cwd })
 
           return 'Component successfully created!'
         })

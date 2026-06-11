@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import { {{ pascalCase name }} } from './{{ pascalCase name}}'
@@ -5,7 +6,36 @@ import { {{ pascalCase name }} } from './{{ pascalCase name}}'
 describe('{{ pascalCase name }}', () => {
   it('should render', () => {
     render(<{{ pascalCase name }} />)
-    
+
     expect(screen.getByText('{{ pascalCase name }} component')).toBeInTheDocument()
+  })
+
+  it('should merge custom className with default classes', () => {
+    const { container } = render(<{{ pascalCase name }} className="custom-class" />)
+    {{#if isUiComponent}}
+    const element = container.querySelector('.ui-{{ kebabCase name }}')
+    {{else}}
+    const element = container.querySelector('.starter-{{ kebabCase name }}')
+    {{/if}}
+
+    {{#if isUiComponent}}
+    expect(element).toHaveClass('custom-class', 'ui-{{ kebabCase name }}')
+    {{else}}
+    expect(element).toHaveClass('custom-class', 'starter-{{ kebabCase name }}')
+    {{/if}}
+  })
+
+  it('should pass additional props to the div element', () => {
+    const { container } = render(<{{ pascalCase name }} data-testid="custom-{{ kebabCase name }}" />)
+
+    expect(container.querySelector('[data-testid="custom-{{ kebabCase name }}"]')).toBeInTheDocument()
+  })
+
+  it('forwards ref to the parent element', () => {
+    const ref = React.createRef<HTMLDivElement>()
+    render(<{{ pascalCase name }} ref={ref} />)
+
+    expect(ref.current).toBeInstanceOf(HTMLDivElement)
+    expect(ref.current?.textContent).toBe('{{ pascalCase name }} component')
   })
 })

@@ -64,14 +64,12 @@ function createPackageGenerator(plop: PlopTypes.NodePlopAPI): void {
       async (answers) => {
         const { name, scope } = answers as PackageAnswers
         const cwd = process.cwd()
-        console.log('Linting package.json...')
-        execSync('pnpm manypkg fix', { stdio: 'inherit', cwd })
         console.log('Fixing prettier issues...')
         execSync(`pnpm prettier --write ${scope}/${name}/** --list-different`)
         console.log('Installing dependencies (this may take a moment)...')
         execSync('pnpm install --no-frozen-lockfile', { stdio: 'inherit', cwd })
-        console.log('Linting remaining files...')
-        execSync('pnpm lint -- --fix', { stdio: 'inherit' })
+        console.log('Linting new package files...')
+        execSync(`pnpm --filter=${name} exec eslint --fix`, { stdio: 'inherit' })
 
         return 'Package successfully created!'
       },
