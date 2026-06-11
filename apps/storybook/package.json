@@ -13,9 +13,9 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@starter/eslint": "workspace:^",
-    "@starter/ts": "workspace:^",
-    "@starter/ui": "workspace:^",
+    "@starter/eslint": "workspace:*",
+    "@starter/ts": "workspace:*",
+    "@starter/ui": "workspace:*",
     "@storybook/react-vite": "10.4.3",
     "@tailwindcss/postcss": "catalog:",
     "@types/node": "catalog:",

@@ -85,13 +85,13 @@ importers:
         version: 19.2.7(react@19.2.7)
     devDependencies:
       '@starter/eslint':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../config/eslint
       '@starter/ts':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../config/ts
       '@starter/ui':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/ui
       '@storybook/react-vite':
         specifier: 10.4.3
