@@ -16,3 +16,7 @@ A starter kit for building a monorepo with Turborepo and pnpm.
 1. (optional) Rename the package namespace from `@starter` to your desired namespace in all files.
 2. Install dependencies by running `pnpm install` in the root directory.
 3. Start developing by running `pnpm dev` to launch the Next.js app, Storybook, and UI package.
+
+## Generating packages and components
+
+1. Run `pnpm gen` to be guided through the process of generating a new component in the `ui` package, the `web` app, or generating an entirely new package.
