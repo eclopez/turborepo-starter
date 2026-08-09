@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "clsx": "catalog:",
-    "next": "16.2.9",
+    "next": "16.3.0",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
@@ -34,7 +34,6 @@
     "@types/react": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
-    "vite-tsconfig-paths": "catalog:",
     "vitest": "catalog:"
   }
 }
