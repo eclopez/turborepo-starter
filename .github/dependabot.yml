@@ -1,0 +1,105 @@
+version: 2
+
+updates:
+  # GitHub Actions used by .github/workflows/ci.yml
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: ci
+      include: scope
+    labels:
+      - dependencies
+      - github-actions
+    groups:
+      github-actions:
+        patterns:
+          - '*'
+
+  # pnpm workspace. The root entry covers every workspace package listed in
+  # pnpm-workspace.yaml (apps/*, config/*, packages/*) as well as the shared
+  # `catalog:` block itself.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: chore
+      include: scope
+    labels:
+      - dependencies
+    # Let releases settle before opening a PR, so we don't chase versions that
+    # get unpublished or immediately patched.
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+    # A dependency lands in the FIRST group it matches, so the lockstep
+    # families below must be declared before the `*` catch-all. Anything not
+    # matched here (i.e. a major on a non-family package) gets its own PR.
+    groups:
+      react:
+        patterns:
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
+          - eslint-plugin-react-hooks
+      next:
+        patterns:
+          - next
+          - '@next/*'
+      storybook:
+        patterns:
+          - storybook
+          - '@storybook/*'
+      # oxlint-tsgolint versions track the TypeScript release they support,
+      # so TypeScript and the linter have to move together.
+      typescript:
+        patterns:
+          - typescript
+          - oxlint
+          - oxlint-tsgolint
+      tailwind:
+        patterns:
+          - tailwindcss
+          - '@tailwindcss/*'
+          - tailwind-merge
+      vitest:
+        patterns:
+          - vitest
+          - '@vitest/*'
+          - '@vitejs/*'
+          - jsdom
+      testing-library:
+        patterns:
+          - '@testing-library/*'
+      tsdown:
+        patterns:
+          - tsdown
+          - '@tsdown/*'
+          - rolldown
+      turbo:
+        patterns:
+          - turbo
+          - '@turbo/*'
+      postcss:
+        patterns:
+          - postcss
+          - postcss-*
+      prettier:
+        patterns:
+          - prettier
+          - '@trivago/prettier-plugin-sort-imports'
+      # Everything else: one PR per week for all remaining minor/patch bumps.
+      minor-and-patch:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
