@@ -10,9 +10,6 @@
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "inputs": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
-    },
     "test": {
       "cache": true,
       "inputs": ["src/**", "test/**", "vitest.config.ts", "tsconfig.json", "package.json"]
