@@ -1,6 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
+import { mergeAlias } from 'vite'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -20,10 +21,9 @@ const config: StorybookConfig = {
       ...config,
       resolve: {
         ...config.resolve,
-        alias: {
-          ...config.resolve?.alias,
+        alias: mergeAlias(config.resolve?.alias, {
           '@': resolve(__dirname, '../../../packages/ui/src'),
-        },
+        }),
       },
       build: {
         ...config.build,
