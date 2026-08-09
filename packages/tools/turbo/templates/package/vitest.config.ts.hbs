@@ -3,7 +3,6 @@ import reactConfig from '@starter/vitest/react'
 {{else}}
 import libraryConfig from '@starter/vitest/library'
 {{/if}}
-import tsconfigPaths from 'vite-tsconfig-paths'
 import { defineConfig, mergeConfig } from 'vitest/config'
 
 export default mergeConfig(
@@ -13,7 +12,9 @@ export default mergeConfig(
   libraryConfig,
   {{/if}}
   defineConfig({
-    plugins: [tsconfigPaths()],
+    resolve: {
+      tsconfigPaths: true,
+    },
     test: {
       exclude: ['node_modules'],
     },
