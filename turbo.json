@@ -10,6 +10,10 @@
       "cache": false,
       "persistent": true
     },
+    "//#lint:repo": {
+      "dependsOn": ["@starter/ui#build"],
+      "inputs": ["**/*.{ts,tsx,js,jsx,mjs,cjs}", ".oxlintrc.json", "pnpm-lock.yaml"]
+    },
     "test": {
       "cache": true,
       "inputs": ["src/**", "test/**", "vitest.config.ts", "tsconfig.json", "package.json"]
