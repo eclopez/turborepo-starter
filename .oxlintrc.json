@@ -58,12 +58,6 @@
   },
   "overrides": [
     {
-      "files": ["**/index.ts"],
-      "rules": {
-        "unicorn/no-empty-file": "off"
-      }
-    },
-    {
       "files": ["**/*.stories.{ts,tsx}", "**/.storybook/**", "**/*.config.{ts,js,mjs,cjs}"],
       "rules": {
         "react/only-export-components": "off",

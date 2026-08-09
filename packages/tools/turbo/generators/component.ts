@@ -94,7 +94,7 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
               const lines = content
                 .trim()
                 .split('\n')
-                .filter((line) => line.trim())
+                .filter((line) => line.trim() && line.trim() !== 'export {}')
               lines.push(newExport)
               lines.sort()
 
