@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* oxlint-disable no-console */
 import type { PlopTypes } from '@turbo/gen'
 import { execSync } from 'node:child_process'
 
