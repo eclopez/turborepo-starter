@@ -107,8 +107,8 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
           const cwd = process.cwd()
           console.log('Fixing prettier issues...')
           execSync(`pnpm prettier --write "packages/ui/src/components/${scope}/${name}/**" --list-different`, { cwd })
-          console.log('Linting remaining files...')
-          execSync('pnpm lint -- --fix', { stdio: 'inherit', cwd })
+          console.log('Linting new component files...')
+          execSync(`pnpm exec oxlint -c .oxlintrc.json --fix "packages/ui/src/components/${scope}/${name}"`, { cwd })
 
           return 'Component successfully created!'
         })
@@ -136,7 +136,7 @@ function createComponentGenerator(plop: PlopTypes.NodePlopAPI): void {
           console.log('Fixing prettier issues...')
           execSync(`pnpm prettier --write "apps/web/src/components/${name}/**" --list-different`, { cwd })
           console.log('Linting new component files...')
-          execSync(`pnpm --filter=web exec eslint --fix "src/components/${name}/**"`, { cwd })
+          execSync(`pnpm exec oxlint -c .oxlintrc.json --fix "apps/web/src/components/${name}"`, { cwd })
 
           return 'Component successfully created!'
         })
