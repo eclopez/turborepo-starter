@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* oxlint-disable no-console */
 import type { PlopTypes } from '@turbo/gen'
 import { execSync } from 'node:child_process'
 
@@ -52,13 +52,8 @@ function createPackageGenerator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: 'add',
-        path: '{{ turbo.paths.root }}/{{ scope }}/{{ name }}/eslint.config.mjs',
-        templateFile: '../templates/package/eslint.config.mjs.hbs',
-      },
-      {
-        type: 'add',
         path: '{{ turbo.paths.root }}/{{ scope }}/{{ name }}/src/index.ts',
-        template: '',
+        template: 'export {}\n',
         skipIfExists: true,
       },
       async (answers) => {
@@ -69,7 +64,7 @@ function createPackageGenerator(plop: PlopTypes.NodePlopAPI): void {
         console.log('Installing dependencies (this may take a moment)...')
         execSync('pnpm install --no-frozen-lockfile', { stdio: 'inherit', cwd })
         console.log('Linting new package files...')
-        execSync(`pnpm --filter=${name} exec eslint --fix`, { stdio: 'inherit' })
+        execSync(`pnpm exec oxlint -c .oxlintrc.json --fix ${scope}/${name}`, { stdio: 'inherit', cwd })
 
         return 'Package successfully created!'
       },

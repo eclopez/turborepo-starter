@@ -10,8 +10,13 @@
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "inputs": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+    "//#lint:repo": {
+      "dependsOn": ["@starter/ui#build"],
+      "inputs": ["**/*.{ts,tsx,js,jsx,mjs,cjs}", ".oxlintrc.json", "pnpm-lock.yaml"]
+    },
+    "//#lint:repo:fix": {
+      "dependsOn": ["@starter/ui#build"],
+      "cache": false
     },
     "test": {
       "cache": true,
