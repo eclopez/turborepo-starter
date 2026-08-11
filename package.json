@@ -45,6 +45,6 @@
     "oxlint": "1.77.0",
     "oxlint-tsgolint": "7.0.2001",
     "prettier": "3.8.4",
-    "turbo": "2.9.18"
+    "turbo": "2.10.8"
   }
 }
