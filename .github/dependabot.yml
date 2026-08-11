@@ -39,6 +39,11 @@ updates:
       semver-major-days: 30
       semver-minor-days: 7
       semver-patch-days: 3
+    ignore:
+      # Vercel's Node runtime tops out at 24.x (see .nvmrc), revisit when Vercel ships Node 26.
+      - dependency-name: '@types/node'
+        update-types:
+          - version-update:semver-major
     # A dependency lands in the FIRST group it matches, so the lockstep
     # families below must be declared before the `*` catch-all. Anything not
     # matched here (i.e. a major on a non-family package) gets its own PR.
