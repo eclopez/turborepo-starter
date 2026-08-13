@@ -10,10 +10,10 @@ catalog:
   '@testing-library/user-event': 14.6.3
   '@types/node': 24.1.0
   '@types/react': 19.2.18
-  '@vitejs/plugin-react': 6.0.2
+  '@vitejs/plugin-react': 6.0.5
   'clsx': 2.1.1
   'react': 19.2.8
   'react-dom': 19.2.8
   'tailwindcss': 4.3.3
   'typescript': 7.0.2
-  'vitest': 4.1.8
+  'vitest': 4.1.10
