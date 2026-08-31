@@ -237,7 +237,7 @@ importers:
         version: 14.6.3(@testing-library/dom@10.4.1)
       '@tsdown/css':
         specifier: 0.22.14
-        version: 0.22.14(jiti@2.7.0)(postcss-import@16.1.1(postcss@8.5.26))(postcss@8.5.26)(tsdown@0.22.14)(yaml@2.9.0)
+        version: 0.22.14(jiti@2.7.0)(postcss-import@16.2.0(postcss@8.5.26))(postcss@8.5.26)(tsdown@0.22.14)(yaml@2.9.0)
       '@types/node':
         specifier: 'catalog:'
         version: 24.13.3
@@ -251,8 +251,8 @@ importers:
         specifier: 8.5.26
         version: 8.5.26
       postcss-import:
-        specifier: 16.1.1
-        version: 16.1.1(postcss@8.5.26)
+        specifier: 16.2.0
+        version: 16.2.0(postcss@8.5.26)
       tailwindcss:
         specifier: 'catalog:'
         version: 4.3.3
@@ -2962,12 +2962,8 @@ packages:
     resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
     engines: {node: '>=12'}
 
-  pify@2.3.0:
-    resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
-    engines: {node: '>=0.10.0'}
-
-  postcss-import@16.1.1:
-    resolution: {integrity: sha512-2xVS1NCZAfjtVdvXiyegxzJ447GyqCeEI5V7ApgQVOWnros1p5lGNovJNapwPpMombyFBfqDwt7AD3n2l0KOfQ==}
+  postcss-import@16.2.0:
+    resolution: {integrity: sha512-0mQUGlSp87Zl70K58RNwQAN1WS9plFE6KWGui9nyK6ninduMyjW/Khaoy/BpBoFTBh7ndAvAKrSKVbwy6vd/BA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       postcss: ^8.0.0
@@ -3042,8 +3038,8 @@ packages:
     resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
-  read-cache@1.0.0:
-    resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
+  read-cache@1.0.2:
+    resolution: {integrity: sha512-/peqiBB/n07gQGLsWaHho3WfvUyRscw0gYTsEFMhrIe/nWLkYaf5SbKYjGYqtRV3aPwykJgF2VEMo1ac4bnsGA==}
 
   recast@0.23.21:
     resolution: {integrity: sha512-mFAyJq9vUbSTARLZUvAEf1z3YxlvAwswbmxMx2mPA/MSm4KmpwvwvhsH/NIrZhyOuwD60Lzyw2qh83uCbgTPYw==}
@@ -4607,7 +4603,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tsdown/css@0.22.14(jiti@2.7.0)(postcss-import@16.1.1(postcss@8.5.26))(postcss@8.5.26)(tsdown@0.22.14)(yaml@2.9.0)':
+  '@tsdown/css@0.22.14(jiti@2.7.0)(postcss-import@16.2.0(postcss@8.5.26))(postcss@8.5.26)(tsdown@0.22.14)(yaml@2.9.0)':
     dependencies:
       lightningcss: 1.33.0
       postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.26)(yaml@2.9.0)
@@ -4615,7 +4611,7 @@ snapshots:
       tsdown: 0.22.14(@tsdown/css@0.22.14)(oxc-resolver@11.24.2)(typescript@7.0.2)
     optionalDependencies:
       postcss: 8.5.26
-      postcss-import: 16.1.1(postcss@8.5.26)
+      postcss-import: 16.2.0(postcss@8.5.26)
     transitivePeerDependencies:
       - jiti
       - tsx
@@ -5669,13 +5665,11 @@ snapshots:
 
   picomatch@4.0.5: {}
 
-  pify@2.3.0: {}
-
-  postcss-import@16.1.1(postcss@8.5.26):
+  postcss-import@16.2.0(postcss@8.5.26):
     dependencies:
       postcss: 8.5.26
       postcss-value-parser: 4.2.0
-      read-cache: 1.0.0
+      read-cache: 1.0.2
       resolve: 1.22.12
 
   postcss-load-config@6.0.1(jiti@2.7.0)(postcss@8.5.26)(yaml@2.9.0):
@@ -5742,9 +5736,7 @@ snapshots:
 
   react@19.2.8: {}
 
-  read-cache@1.0.0:
-    dependencies:
-      pify: 2.3.0
+  read-cache@1.0.2: {}
 
   recast@0.23.21:
     dependencies:
@@ -5993,7 +5985,7 @@ snapshots:
       unconfig-core: 7.5.0
       verkit: 0.3.2
     optionalDependencies:
-      '@tsdown/css': 0.22.14(jiti@2.7.0)(postcss-import@16.1.1(postcss@8.5.26))(postcss@8.5.26)(tsdown@0.22.14)(yaml@2.9.0)
+      '@tsdown/css': 0.22.14(jiti@2.7.0)(postcss-import@16.2.0(postcss@8.5.26))(postcss@8.5.26)(tsdown@0.22.14)(yaml@2.9.0)
       typescript: 7.0.2
     transitivePeerDependencies:
       - '@typescript/native-preview'
