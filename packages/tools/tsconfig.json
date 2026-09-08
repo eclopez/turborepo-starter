@@ -5,7 +5,6 @@
     "paths": {
       "@/*": ["./turbo/*"]
     },
-    "types": ["node"],
     "verbatimModuleSyntax": false
   },
   "include": ["**/*.mts", "**/*.ts", "turbo/generators/config.ts", "turbo/generators/config.ts"],

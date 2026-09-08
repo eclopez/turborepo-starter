@@ -3,8 +3,6 @@
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "types": ["vitest"],
-    "module": "preserve",
-    "moduleResolution": "bundler",
     "noEmit": true
   },
   "include": ["*.ts"]
