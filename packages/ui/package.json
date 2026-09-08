@@ -45,7 +45,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "jsdom": "29.1.1",
-    "postcss": "8.5.26",
+    "postcss": "8.5.28",
     "postcss-import": "16.1.1",
     "tailwindcss": "catalog:",
     "tsdown": "0.22.14",
