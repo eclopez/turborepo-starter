@@ -1,8 +1,10 @@
 import { defineConfig } from 'tsdown'
 
 const config = defineConfig({
-  // Copy theme.css without processing
-  copy: [{ from: 'src/styles/theme.css', to: 'dist/styles' }],
+  // Never wipe dist/: `tsdown --watch` starts alongside `next dev`, and a wipe under a live dev server
+  // leaves web resolving `@…/ui/styles/*` to a missing file, which Turbopack caches as a 500 until the
+  // CSS is touched. Builds overwrite in place; `pnpm clean` wipes dist for a from-scratch build.
+  clean: false,
   css: {
     fileName: 'styles/ui.css',
     transformer: 'postcss',

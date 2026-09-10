@@ -17,11 +17,12 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles/theme": "./dist/styles/theme.css",
+    "./styles/theme": "./src/styles/theme.css",
     "./styles/ui": "./dist/styles/ui.css"
   },
   "scripts": {
     "build": "tsdown",
+    "clean": "rm -rf dist",
     "dev": "tsdown --watch",
     "test": "vitest run",
     "test:watch": "vitest",
