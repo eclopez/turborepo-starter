@@ -44,6 +44,7 @@
     "@tsdown/css": "0.22.14",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
+    "class-variance-authority": "catalog:",
     "jsdom": "29.1.1",
     "postcss": "8.5.28",
     "postcss-import": "16.1.1",
