@@ -1,8 +1,8 @@
 import * as React from 'react'
 {{#if isUiComponent}}
-import { cn } from '@/utils'
+import { twMerge } from '@/utils'
 {{else}}
-import { cn } from '@starter/ui'
+import { twMerge } from '@starter/ui'
 {{/if}}
 
 type {{ pascalCase name }}Props = React.ComponentPropsWithRef<'div'>
@@ -12,9 +12,9 @@ const {{ pascalCase name }} = (props: {{ pascalCase name }}Props) => {
 
   return (
     {{#if isUiComponent}}
-    <div className={cn('ui-{{dashCase name}}', className)} {...other}>
+    <div className={twMerge('ui-{{dashCase name}}', className)} {...other}>
     {{else}}
-    <div className={cn('starter-{{dashCase name}}', className)} {...other}>
+    <div className={twMerge('starter-{{dashCase name}}', className)} {...other}>
     {{/if}}
       {{ pascalCase name }} component
     </div>
