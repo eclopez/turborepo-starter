@@ -29,7 +29,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "clsx": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tailwind-merge": "3.6.0"
