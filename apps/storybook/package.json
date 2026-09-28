@@ -19,7 +19,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "storybook": "10.5.10",
+    "storybook": "10.6.0",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "vite": "8.2.2"
