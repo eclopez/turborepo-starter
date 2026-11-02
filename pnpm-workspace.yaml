@@ -13,8 +13,8 @@ catalog:
   '@types/react': 19.3.0
   '@vitejs/plugin-react': 6.1.2
   'class-variance-authority': 0.7.1
-  'react': 19.3.0
-  'react-dom': 19.3.0
+  'react': 19.3.1
+  'react-dom': 19.3.1
   'tailwindcss': 4.3.3
   'typescript': 7.0.2
   'vitest': 4.1.12
